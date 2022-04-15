@@ -8,7 +8,7 @@
 import UIKit
 
 class ChooseFloorViewController: UIViewController {
-
+    
     var up:Bool!
     var buttonPicked:Int!
     var floorDestination = 0
@@ -174,7 +174,7 @@ class ChooseFloorViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "confirmationSegue" {
-            if let segueViewController = segue.destination as? ChooseFloorViewController {
+            if let segueViewController = segue.destination as? ConfirmationViewController {
                 let btn:UIButton = sender as! UIButton
                 
                 print("--")
@@ -197,6 +197,5 @@ class ChooseFloorViewController: UIViewController {
                 segueViewController.buttonPicked = buttonPicked
             }
         }
-     }
-    
+    }
 }

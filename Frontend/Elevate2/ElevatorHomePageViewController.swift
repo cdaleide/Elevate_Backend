@@ -15,9 +15,6 @@ class ElevatorHomePageViewController: UIViewController {
     @IBOutlet weak var web: UIWebView!
     
     @IBAction func upButton(_ sender: UIButton) {
-        let url=URL(string: "http://18.219.245.250:80/1/up")
-        let urlreq=URLRequest(url: url!)
-        self.web.loadRequest(urlreq)
         
         up = true
         self.performSegue(withIdentifier: "upPressed", sender: up)
